@@ -1,0 +1,14 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "ToDoList application web",
+  "main": "index.js",
+  "author": "Leonardo neves Porto <leonardoporto11@hotmail.com>",
+  "license": "ISC",
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leonardo-PRT/ToDoList.git"
+  }
+  
+}
