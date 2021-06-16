@@ -5,10 +5,19 @@
   "main": "index.js",
   "author": "Leonardo neves Porto <leonardoporto11@hotmail.com>",
   "license": "ISC",
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Leonardo-PRT/ToDoList.git"
+  },
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.7",
+    "sequelize": "^6.6.2",
+    "sequelize-cli": "^6.2.0",
+    "yarn": "^1.22.10"
   }
-  
 }
