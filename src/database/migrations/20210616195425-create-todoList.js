@@ -2,7 +2,7 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('todoList', { 
+    await queryInterface.createTable('todo_list', { 
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -17,7 +17,7 @@ module.exports = {
 
       completed: {
         type: Sequelize.BOOLEAN,
-        allowNull: false
+        allowNull: false,
       },
 
       created_at: {
@@ -29,11 +29,11 @@ module.exports = {
         type: Sequelize.DATE,
         allowNull: false
       }
-    });
 
+    });
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('users');
+    await queryInterface.dropTable('todo_list');
   }
 };
