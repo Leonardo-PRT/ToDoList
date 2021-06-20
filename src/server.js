@@ -7,7 +7,13 @@ const app =  express()
 
 app.use(express.json())
 app.use(routes)
+app.set('view engine', 'html')
 
-app.listen(8000, () => {
-    console.log('Executando o servidor na porta: 8000')
+
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/views/index.html');
+})
+
+app.listen(3333, () => {
+    console.log('Executando o servidor na porta: 3333')
 })

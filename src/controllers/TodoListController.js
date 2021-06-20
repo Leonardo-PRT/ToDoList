@@ -5,6 +5,8 @@ module.exports = {
         const {name} = req.body
         const task = await Todo_list.create({ name })
 
+        if(!task.name) return res.status(404).json({erro: 'Want to insert a name to the task! '})
+
         return res.json(task)
     },
 
@@ -27,21 +29,44 @@ module.exports = {
     async updateTask(req, res){
         const { id } = req.params
         const { name, completed } = req.body
+
+        
+
         const task = await Todo_list.update({name: name, completed: completed},
             {
                 where: { id: id }
             })
+
+        if(!task) return res.status(404).json({erro: 'Task not found! '})
+
         return res.json(task)
-        
-        
+    
+    },
+
+    async updateAll(req, res){
+        const task = await Todo_list.findAll({
+            where: {completed: false}
+        })
+        if (task.length != 0) {
+            const completedTask = await Todo_list.update({completed: true}, {
+                where: {completed: false}
+            })
+            return res.json(completedTask)
+        }else{
+            const activeTask = await Todo_list.update({completed: false}, {
+                where: {completed: true}
+            })
+            return res.json(activeTask)
+        }
+
+
     },
 
     async listAll(req, res) {
         const task = await Todo_list.findAll()
-        const not_checked = await Todo_list.findAll({ where: { completed: false}})
-        console.log("-------------------------->" + not_checked.length +" item lefts<-------------------------------")
+        // const not_checked = await Todo_list.findAll({ where: { completed: false}})
         
-        if(!task) return res.status(404).json({erro: 'Task not found! '})
+        // if(!task) return res.status(404).json({erro: 'Task not found! '})
 
         return res.json(task)
     },
@@ -76,6 +101,8 @@ module.exports = {
                 completed: true
             }
         })
+
+        if(!task) return res.status(404).json({erro: 'Task not found! '})
 
         return res.json(task)
     }

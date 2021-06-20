@@ -3,25 +3,18 @@ const routes = express.Router()
 
 const TodoListController = require('./controllers/TodoListController')
 
-routes.get('/', (req, res) => {
-    
-    return res.json('Hello World!!')
-})
 
-
-routes.post('/todo_list', TodoListController.createTask)
+routes.post('/create', TodoListController.createTask)
 routes.post('/completed', TodoListController.listCompleted)
-routes.post('/active', TodoListController.listActive)
-routes.post('/', TodoListController.listAll)
+routes.post('/#/active', TodoListController.listActive)
+routes.get('/todo_list', TodoListController.listAll)
 
 routes.delete('/delete/:id', TodoListController.deleteTask)
 routes.delete('/', TodoListController.deleteCompleted)
 
 
 routes.put('/:id', TodoListController.updateTask)
-
-
-
+routes.put('/', TodoListController.updateAll)
 
 
 module.exports = routes
