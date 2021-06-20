@@ -3,7 +3,7 @@ module.exports = {
     host: 'localhost',
     username: '*****',
     password: '*******',
-    database: 'BrightCities',
+    database: 'ToDoList',
     port: 3306,
     define: {
         timestamps: true,
