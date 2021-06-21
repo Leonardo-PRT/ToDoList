@@ -17,14 +17,14 @@
 			
 		</header>
 		<section class="main" id="main">
-			<input id="toggle-all" class="toggle-all" type="checkbox"  >
-			<label for="toggle-all" >Mark all as complete</label>
+			<input id="toggle-all" class="toggle-all" type="checkbox" onclick="markAllAsCompleted()" >
+			<label for="toggle-all" id="mark-all" >Mark all as complete</label>
 			<ul class="todo-list" id="todo-list" >
 				
 			</ul>
 		</section>
 		<footer class="footer" id="footer">
-			<span class="todo-count"></span>
+			
 			<ul class="filters">
 				<li>
 					<a href="/" class="selected" id="all">All</a>
@@ -36,7 +36,7 @@
 					<a href="/#/completed" id="completed" onclick="listCompleted()">Completed</a>
 				</li>
 			</ul>
-			<button class="clear-completed" style="display: none;">Clear completed</button>
+			<button id="deletCompleted" class="clear-completed" >Clear completed</button>
 		</footer>
 	</section>
 	<footer class="info">
