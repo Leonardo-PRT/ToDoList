@@ -38,7 +38,7 @@ async function listAll() {
                 <li class="completed" id="todo" data-id="${todoId}">
                     <div class="view">
                         <input class="toggle" type="checkbox" checked="" onclick="markAsCompleted(${todoId})" ">
-                        <label ondblclick="renameTask()">${todoName}</label>
+                        <label>${todoName}</label>
                         <button class="destroy" onclick="removeTask(${todoId})"></button>
                     </div>
                 </li>
@@ -173,7 +173,7 @@ async function listActive() {
                     <li class="" data-id="${todoId}">
                         <div class="view">
                             <input class="toggle" type="checkbox"  onclick="markAsCompleted(${todoId})" >
-                            <label ondblclick="renameTask()">${todoName}</label>
+                            <label>${todoName}</label>
                             <button class="destroy" onclick="removeTask(${todoId})"></button>
                         </div>
                     </li>
@@ -453,10 +453,5 @@ async function removeTask(id) {
     }else if (local == 'completed') {
         listCompleted()
     }
-}
-
-async function renameTask(id) {
-    var todo = document.querySelector('#todo')
-    todo.classList.add('editing')
 }
 listAll()
