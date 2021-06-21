@@ -39,7 +39,11 @@ module.exports = {
 
         if(!task) return res.status(404).json({erro: 'Task not found! '})
 
-        return res.json(task)
+        const find = await Todo_list.findAll({
+            where: {id: id}
+        })
+
+        return res.json(find)
     
     },
 

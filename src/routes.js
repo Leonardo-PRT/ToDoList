@@ -10,7 +10,7 @@ routes.post('/active', TodoListController.listActive)
 routes.post('/todo_list', TodoListController.listAll)
 
 routes.delete('/delete/:id', TodoListController.deleteTask)
-routes.delete('/', TodoListController.deleteCompleted)
+routes.delete('/delete', TodoListController.deleteCompleted)
 
 
 routes.put('/:id', TodoListController.updateTask)
