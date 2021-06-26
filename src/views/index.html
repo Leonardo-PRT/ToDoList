@@ -6,43 +6,42 @@
 	<title>VanillaJS • TodoMVC</title>
 	<link rel="stylesheet" href="style/index.css">
 	<link rel="stylesheet" href="style/base.css">
-	<script src="script/main.js"></script>
+	<script src="../../public/script/main.js"></script>
 </head>
 
 <body>
 	<section class="todoapp">
 		<header class="header">
 			<h1>todos</h1>
-			<input required class="new-todo" id="new-todo" placeholder="What needs to be done?" autofocus >
-			
+			<input required class="new-todo" id="new-todo" placeholder="What needs to be done?" autofocus>
+
 		</header>
 		<section class="main" id="main">
-			<input id="toggle-all" class="toggle-all" type="checkbox" onclick="markAllAsCompleted()" >
-			<label for="toggle-all" id="mark-all" >Mark all as complete</label>
-			<ul class="todo-list" id="todo-list" >
-				
+			<input id="toggle-all" class="toggle-all" type="checkbox" onclick="markAllAsCompleted()">
+			<label for="toggle-all" id="mark-all">Mark all as complete</label>
+			<ul class="todo-list" id="todo-list">
+
 			</ul>
 		</section>
 		<footer class="footer" id="footer">
-			
+
 			<ul class="filters">
 				<li>
 					<a href="/" class="selected" id="all">All</a>
 				</li>
 				<li>
-					<a href="/#/active" id="active" onclick="listActive()" >Active</a>
+					<a href="/#/active" id="active" onclick="listActive()">Active</a>
 				</li>
 				<li>
 					<a href="/#/completed" id="completed" onclick="listCompleted()">Completed</a>
 				</li>
 			</ul>
-			<button id="deletCompleted" class="clear-completed" >Clear completed</button>
+			<button id="deletCompleted" class="clear-completed">Clear completed</button>
 		</footer>
 	</section>
 	<footer class="info">
 		<p>Double-click to edit a todo</p>
-		<p>Created by <a href="http://twitter.com/oscargodson">Oscar Godson</a></p>
-		<p>Refactored by <a href="https://github.com/cburgmer">Christoph Burgmer</a></p>
+		<p>Refactored by <a href="https://github.com/Leonardo-PRT">Christoph Burgmer</a></p>
 		<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
 	</footer>
 
