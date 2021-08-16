@@ -20,8 +20,3 @@
  
 - Undo migrations
   - npx sequelize db:migrate:undo || yarn sequelize db:migrate:undo
-
-### Contact
-  - Leonardo Neves porto
-    - <a href=“https://github.com/Leonardo-PRT“>GitHub</a>
-    - <a href=“https://www.linkedin.com/in/leonardo-neves-porto-01b325191/“>Linkedin</a>
